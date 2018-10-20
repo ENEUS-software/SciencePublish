@@ -1,24 +1,24 @@
 <?php
 
-namespace Drupal\Tests\science\FunctionalJavascript;
+namespace Drupal\Tests\science_publisher\FunctionalJavascript;
 
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\node\Entity\Node;
 
 /**
- * Tests SciencePublish installation profile JavaScript expectations.
+ * Tests SciencePublisher installation profile JavaScript expectations.
  *
- * @group science
+ * @group sciences_publisher
  */
-class SciencesPublisherJavascriptTest extends WebDriverTestBase {
+class SciencePublisherJavascriptTest extends WebDriverTestBase {
 
   /**
    * {@inheritdoc}
    */
-  protected $profile = 'science';
+  protected $profile = 'Science Publisher';
 
   /**
-   * Tests BigPipe accelerates particular SciencePublish installation profile routes.
+   * Tests BigPipe accelerates particular SciencePublisher installation profile routes.
    */
   public function testBigPipe() {
     $this->drupalLogin($this->drupalCreateUser([

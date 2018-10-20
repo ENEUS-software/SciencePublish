@@ -54,22 +54,15 @@ endif
 ifeq ($(PROJECT_INSTALL), config)
 	$(call php, drush si config_installer --db-url=$(DB_URL) --account-pass=admin -y config_installer_sync_configure_form.sync_directory=../config/sync)
 else
-	$(call php, drush si $(PROFILE_NAME) --db-url=$(DB_URL) --account-pass=admin -y --site-name="$(SITE_NAME)" --site-mail="$(SITE_MAIL)" install_configure_form.site_default_country=FR install_configure_form.date_default_timezone=Europe/Paris)
+	$(call php, drush si $(PROFILE_NAME) --db-url=$(DB_URL) --account-pass=admin -y --site-name="$(SITE_NAME)" --site-mail="$(SITE_MAIL)" install_configure_form.date_default_timezone=Europe/Kiev)
 endif
 	$(call php, drush en $(MODULES) -y)
 	$(call php, drush pmu $(MODULES) -y)
-	$(call php, drush search-api-reindex)
-	$(call php, drush search-api-index)
-	make -s locale-update
 	#make -s cim
 	#make -s update-alias
 	#make -s _local-settings
 	make -s info
 
-## Update locale
-locale-update:
-	$(call php, drush locale-check)
-	$(call php, drush locale-update)
 
 _local-settings:
 	@echo "Turn on settings.local"

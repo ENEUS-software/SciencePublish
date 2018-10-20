@@ -22,11 +22,12 @@ services:
     volumes_from:
       - php
     volumes:
-      - ./localhost.conf:/etc/nginx/conf.d/localhost.conf:z
+      - ../configs/nginx/science.conf:/etc/nginx/conf.d/science.conf:z
     restart: always
     networks:
       - front
-
+    ports:
+      - "80:80"
 #  mysql:
 #    image: percona:5.7
 #    container_name: "${COMPOSE_PROJECT_NAME}_mysql"

@@ -239,7 +239,6 @@ class ThreeJSFileFormatter  extends ThreeJSFormatterBase implements ContainerFac
           'library' => [
             'threejs/threejs.loaders.ColladaLoader',
             'threejs/threejs.orbit.controls',
-            'threejs/threejs.detector',
             'threejs/threejs.stats',
             'threejs/threejs.init'
           ],

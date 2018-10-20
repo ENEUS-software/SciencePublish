@@ -1,0 +1,19 @@
+langcode: en
+status: false
+dependencies:
+  enforced:
+    module:
+      - threejs
+id: default
+name: default
+weight: -10
+label: Default
+skin: default
+breakpoints: 0
+group: ''
+optimized: false
+options:
+  options__active_tab: ''
+  settings: null
+_core:
+  default_config_hash: Bk2-66uclXgaIjTdafi_dzKeSTh4XJe_rDXpBIFQ7bo

@@ -1,0 +1,30 @@
+uuid: 11e58186-ee48-4f5e-8eb3-7fbd148c223a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.models.body
+    - node.type.models
+  module:
+    - text
+    - user
+id: node.models.teaser
+targetEntityType: node
+bundle: models
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

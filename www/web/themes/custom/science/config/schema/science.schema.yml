@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Science Publisher theme.
+
+science.settings:
+  type: theme_settings
+  label: 'Science Publisher settings'

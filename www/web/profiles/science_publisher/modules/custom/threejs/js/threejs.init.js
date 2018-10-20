@@ -42,7 +42,6 @@
      */
     renderThreeJSField: function () {
 
-      if (!Detector.webgl) Detector.addGetWebGLMessage();
 
       var container, model, stats, clock, controls;
       var camera, scene, renderer, mixer;

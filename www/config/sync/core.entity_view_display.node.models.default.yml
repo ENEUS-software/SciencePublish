@@ -1,0 +1,52 @@
+uuid: 2950dcdd-df4f-4a94-a055-4410a7f17f15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.models.body
+    - field.field.node.models.field_image
+    - field.field.node.models.field_model
+    - node.type.models
+  module:
+    - image
+    - text
+    - threejs_fields
+    - user
+id: node.models.default
+targetEntityType: node
+bundle: models
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_model:
+    weight: 102
+    label: above
+    settings:
+      canvas_background_transparent: 0
+      canvas_background: '#000000'
+      canvas_width: 100%
+      canvas_height: 480px
+    third_party_settings: {  }
+    type: threejs_file_formatter
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

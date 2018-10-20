@@ -183,7 +183,6 @@ class ThreeJSFileWidget extends FileWidget {
     $element['#attached']['library'] = [
       'threejs/threejs.loaders.ColladaLoader',
       'threejs/threejs.orbit.controls',
-      'threejs/threejs.detector',
       'threejs/threejs.stats',
       'threejs/threejs.admin'
     ];

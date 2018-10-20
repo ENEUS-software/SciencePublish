@@ -55,7 +55,7 @@ threejs:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/build/three.min.js: { minified: true }
+    /libraries/threejs/build/three.min.js: { minified: true }
   dependencies:
       - core/jquery
       - core/drupal
@@ -72,26 +72,13 @@ threejs.dev:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/build/three.js: {}
+    /libraries/threejs/build/three.js: {}
   dependencies:
     - core/jquery
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
     - core/drupal.dialog
-
-# Detector
-threejs.detector:
-  remote: https://github.com/mrdoob/three.js/
-  version: r97
-  license:
-    name: MIT
-    url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
-    gpl-compatible: true
-  js:
-    /libraries/three.js/examples/js/Detector.js: {}
-  dependencies:
-    - threejs/threejs
 
 # stats
 threejs.stats:
@@ -102,7 +89,7 @@ threejs.stats:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/libs/stats.min.js: {}
+    /libraries/threejs/examples/js/libs/stats.min.js: {}
   dependencies:
     - threejs/threejs
 
@@ -115,7 +102,7 @@ threejs.gui:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/libs/dat.gui.min.js: {}
+    /libraries/threejs/examples/js/libs/dat.gui.min.js: {}
   dependencies:
     - threejs/threejs
 
@@ -129,7 +116,7 @@ threejs.deviceorientation.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/DeviceOrientationControls.js: {}
+    /libraries/threejs/examples/js/controls/DeviceOrientationControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -142,7 +129,7 @@ threejs.drag.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/DragControls.js: {}
+    /libraries/threejs/examples/js/controls/DragControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -155,7 +142,7 @@ threejs.editor.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/EditorControls.js: {}
+    /libraries/threejs/examples/js/controls/EditorControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -168,7 +155,7 @@ threejs.firstperson.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/FirstPersonControls.js: {}
+    /libraries/threejs/examples/js/controls/FirstPersonControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -181,7 +168,7 @@ threejs.fly.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/FlyControls.js: {}
+    /libraries/threejs/examples/js/controls/FlyControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -194,7 +181,7 @@ threejs.orbit.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/OrbitControls.js: {}
+    /libraries/threejs/examples/js/controls/OrbitControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -207,7 +194,7 @@ threejs.orthographictrackball.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/OrthographicTrackballControls.js: {}
+    /libraries/threejs/examples/js/controls/OrthographicTrackballControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -220,7 +207,7 @@ threejs.pointerlock.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/PointerLockControls.js: {}
+    /libraries/threejs/examples/js/controls/PointerLockControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -233,7 +220,7 @@ threejs.trackball.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/TrackballControls.js: {}
+    /libraries/threejs/examples/js/controls/TrackballControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -246,7 +233,7 @@ threejs.tansform.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/TransformControls.js: {}
+    /libraries/threejs/examples/js/controls/TransformControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -259,7 +246,7 @@ threejs.vr.controls:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/controls/VRControls.js: {}
+    /libraries/threejs/examples/js/controls/VRControls.js: {}
   dependencies:
     - threejs/threejs
 
@@ -273,9 +260,9 @@ threejs.loaders.OBJLoader2:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/loaders/MTLLoader.js: {}
-    /libraries/three.js/examples/js/loaders/LoaderSupport.js.js: {}
-    /libraries/three.js/examples/js/loaders/OBJLoader2.js: {}
+    /libraries/threejs/examples/js/loaders/MTLLoader.js: {}
+    /libraries/threejs/examples/js/loaders/LoaderSupport.js.js: {}
+    /libraries/threejs/examples/js/loaders/OBJLoader2.js: {}
   dependencies:
     - threejs/threejs
 
@@ -288,6 +275,6 @@ threejs.loaders.ColladaLoader:
     url: https://github.com/mrdoob/three.js/blob/dev/LICENSE
     gpl-compatible: true
   js:
-    /libraries/three.js/examples/js/loaders/ColladaLoader.js: {}
+    /libraries/threejs/examples/js/loaders/ColladaLoader.js: {}
   dependencies:
     - threejs/threejs

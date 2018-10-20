@@ -1,0 +1,48 @@
+uuid: 1e056dc4-f95b-4724-84d1-33fb5f5d4e9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+    - threejs_fields
+id: node.field_model
+field_name: field_model
+entity_type: node
+type: threejs_file
+settings:
+  uri_scheme: public
+  default_canvas:
+    uuid: ''
+    title: ''
+    options:
+      rotation:
+        x: '0.01'
+        'y': '0.1'
+      camera:
+        position:
+          x: '-20'
+          'y': '30'
+          z: '40'
+        controls:
+          orbit: orbit
+          fly: 0
+          device_orientation: 0
+          drag: 0
+          editor: 0
+          first_person: 0
+          orthographic_trackball: 0
+          pointer_lock: 0
+          trackball: 0
+          transform: 0
+          vr: 0
+  target_type: file
+  display_field: false
+  display_default: false
+module: threejs_fields
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

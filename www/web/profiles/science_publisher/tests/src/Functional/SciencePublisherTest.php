@@ -15,13 +15,13 @@ use Drupal\user\Entity\Role;
 /**
  * Tests SciencePublisher installation profile expectations.
  *
- * @group science
+ * @group science_publisher
  */
 class SciencePublisherTest extends BrowserTestBase {
 
   use SchemaCheckTestTrait;
 
-  protected $profile = 'science';
+  protected $profile = 'science_publisher';
 
   /**
    * The admin user.
@@ -31,9 +31,9 @@ class SciencePublisherTest extends BrowserTestBase {
   protected $adminUser;
 
   /**
-   * Tests SciencePublish installation profile.
+   * Tests SciencePublisher installation profile.
    */
-  public function testSciencesPublisher\() {
+  public function testSciencePublisher() {
     $this->drupalGet('');
     $this->assertLink(t('Contact'));
     $this->clickLink(t('Contact'));

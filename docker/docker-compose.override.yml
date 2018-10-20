@@ -3,16 +3,16 @@ version: "2"
 services:
 
 # FrontEnd container
-  jekyll:
-    build: ../configs/jekyll/
-    container_name: "${COMPOSE_PROJECT_NAME}_jekyll"
-    working_dir: /srv/jekyll/src
-    hostname: jekyll
-    command: jekyll serve --watch --config ${COMPOSE_THEME_PROJECT}.yml --host=0.0.0.0
-    ports:
-    - 4000:4000
-    volumes:
-    - ../www/web/themes/custom/${COMPOSE_THEME_PROJECT}:/srv/jekyll:cached
+#  jekyll:
+#    build: ../configs/jekyll/
+#    container_name: "${COMPOSE_PROJECT_NAME}_jekyll"
+#    working_dir: /srv/jekyll/src
+#    hostname: jekyll
+#    command: jekyll serve --watch --config ${COMPOSE_THEME_PROJECT}.yml --host=0.0.0.0
+#    ports:
+#    - 4000:4000
+#    volumes:
+#    - ../www/web/themes/custom/${COMPOSE_THEME_PROJECT}:/srv/jekyll:cached
 
 # Override base service.
   php:
@@ -21,31 +21,31 @@ services:
       - ../www:/var/www/html:cached
 # Uncomment next line if you need PHP XDebug.
     command: php-fpm7 -F -d zend_extension=xdebug.so -d xdebug.remote_connect_back=0 -d xdebug.remote_host=10.254.254.254 -d xdebug.remote_port=9001 -d xdebug.remote_log=/var/www/html/xdebug.log
-    links:
-      - mysql
+#    links:
+#      - mysql
 #    ports:
 #      - "9000:9000"
 
 # Use local folder to not lose data on container crash.
 # CAUTION: Don't use this section on development machine because container
 # working speed will be decreased.
-  mysql:
-    image: percona:5.7
-    environment:
-      MYSQL_DATABASE: eneus
-      MYSQL_USER: eneus
-      MYSQL_PASSWORD: eneus
-      MYSQL_ROOT_PASSWORD: rootwdp
-    container_name: "${COMPOSE_PROJECT_NAME}_mysql"
-    networks:
-      - front
-    volumes:
-    - ../.data/mysql:/var/lib/mysql:cached
+#  mysql:
+#    image: percona:5.7
+#    environment:
+#      MYSQL_DATABASE: eneus`
+#      MYSQL_USER: eneus
+#      MYSQL_PASSWORD: eneus
+#      MYSQL_ROOT_PASSWORD: rootwdp
+#    container_name: "${COMPOSE_PROJECT_NAME}_mysql"
+#    networks:
+#      - front
+#    volumes:
+#    - ../.data/mysql:/var/lib/mysql:cached
 # On for linux machines use ramfs, make sure to create the directory first.
 #    - /dev/shm/${COMPOSE_PROJECT_NAME}_mysql:/var/lib/mysql:Z
     # command: sed  '/\[mysqld\]/a innodb_large_prefix=true \n innodb_file_format=barracuda \n innodb_file_per_table=true' /etc/mysql/my.cnf
-    ports:
-      - "3306:3306"
+#    ports:
+#      - "3306:3306"
 
 #  adminer:
 #    image: dockette/adminer:mysql-php7

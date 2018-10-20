@@ -1,4 +1,4 @@
-name: SciencePublish
+name: Science Publisher
 type: profile
 description: 'Install with commonly used features pre-configured.'
 version: 1.0
@@ -43,6 +43,7 @@ install:
   - admin_toolbar
   - admin_toolbar_tools
   - threejs
+  - threejs_fields
 themes:
   - science
   - seven

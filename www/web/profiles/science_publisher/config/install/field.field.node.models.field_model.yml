@@ -1,0 +1,52 @@
+uuid: cdd65095-c098-4248-88f4-d92fccabe110
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_model
+    - node.type.models
+  module:
+    - threejs_fields
+id: node.models.field_model
+field_name: field_model
+entity_type: node
+bundle: models
+label: '3D Model'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: models
+  file_extensions: 'obj dae glb gltf stl pdb'
+  max_filesize: ''
+  title_field: 0
+  title_field_required: 0
+  default_canvas:
+    uuid: ''
+    title: ''
+    options:
+      rotation:
+        x: '0.01'
+        'y': '0.1'
+      camera:
+        position:
+          x: '-20'
+          'y': '30'
+          z: '40'
+        controls:
+          orbit: orbit
+          fly: 0
+          device_orientation: 0
+          drag: 0
+          editor: 0
+          first_person: 0
+          orthographic_trackball: 0
+          pointer_lock: 0
+          trackball: 0
+          transform: 0
+          vr: 0
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: threejs_file

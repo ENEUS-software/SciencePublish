@@ -6,53 +6,21 @@ global-styling:
       css/maintenance.css: {}
   js:
     js/init.js: {}
-    js/photoswipe.init.js: {}
 
 bootstrap-scripts:
   js:
     https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js: { type: external, minified: true }
 
-PhotoSwipe:
-  remote: https://cdnjs.cloudflare.com/ajax/libs/photoswipe
-  version: 1.4.2
-  license:
-    name: MIT
-    url: https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/LICENSE
-    gpl-compatible: true
+maintenance_page:
+  version: 1.0-dev
   css:
     theme:
-      https://cdn.jsdelivr.net/npm/photoswipe@4.1.2/dist/photoswipe.css: { type: external, minified: true }
-      https://cdn.jsdelivr.net/npm/photoswipe@4.1.2/dist/default-skin/default-skin.css: { type: external, minified: true }
+      css/maintenance-page.css: {}
   js:
-    https://cdn.jsdelivr.net/npm/photoswipe@4.1.2/dist/photoswipe.min.js: { type: external, minified: true }
-    https://cdn.jsdelivr.net/npm/photoswipe@4.1.2/dist/photoswipe-ui-default.min.js: { type: external, minified: true }
-
-slick-carousel:
-  remote: https://cdn.jsdelivr.net/npm/slick-carousel
-  varsion: 1.8.1
-  license:
-    name: MIT
-    url: https://cdn.jsdelivr.net/npm/photoswipe@4.1.2/LICENSE
-    gpl-compatible: true
-  css:
-    theme:
-      https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css: { type: external, minified: true }
-      https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css: { type: external, minified: true }
-  js:
-    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: { type: external, minified: true }
-
-owlcarousel2:
-  remote: https://cdn.jsdelivr.net/npm/owl.carousel
-  version: 2.x
-  license:
-    name: MIT
-    url: https://cdn.jsdelivr.net/npm/owl.carousel@2.2.0/LICENSE
-    gpl-compatible: true
-  css:
-    theme:
-      https://cdn.jsdelivr.net/npm/owl.carousel@2.2.0/dist/assets/owl.carousel.min.css: { type: external, minified: true }
-      https://cdn.jsdelivr.net/npm/owl.carousel@2.2.0/dist/assets/owl.theme.default.min.css: { type: external, minified: true }
-  js:
-    https://cdn.jsdelivr.net/npm/owl.carousel@2.2.0/dist/owl.carousel.min.js: { type: external, minified: true }
+    /libraries/threejs/examples/js/libs/dat.gui.min.js: {}
+    /libraries/threejs/build/three.js: {}
+    /libraries/threejs/examples/js/controls/OrbitControls.js: {}
+    js/front.three.js: {}
   dependencies:
-    - core/jquery
+    - system/maintenance
+    - eneus/global-styling
