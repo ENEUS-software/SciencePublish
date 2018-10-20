@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Three.js fields module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function threejs_fields_install() {
+  // Create the styles directory and ensure it's writable.
+  $directory = file_default_scheme() . '://webgl';
+  file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function threejs_fields_uninstall() {
+  drupal_set_message(__FUNCTION__);
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function threejs_fields_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'runtime') {
+    $value = mt_rand(0, 100);
+    $requirements['threejs_fields_status'] = [
+      'title' => t('Three.js fields status'),
+      'value' => t('Three.js fields value: @value', ['@value' => $value]),
+      'severity' => $value > 50 ? REQUIREMENT_INFO : REQUIREMENT_WARNING,
+    ];
+  }
+
+  return $requirements;
+}

@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ *
+ * @ingroup themeable 
+ *
+ *   <article{{ attributes }}>
+ *     {% if content %}
+ *       {{ content }}
+ *     {% endif %}
+ *   </article>
+ */
+#}
+
+<div class="card card-media">
+  <a href="{{ url }}" title="{{ name }}">
+    <div class="card-image">
+      <div class="card-icons">
+        <span><i class="fa fa-play-circle-o fa-4x" aria-hidden="true"></i></span>
+      </div>
+      {{ content.thumbnail }}
+      <div class="card-promout">
+        <span class="hot">{{ content.created }}</span>
+      </div>
+      <div class="card-duration">
+        <span class="time"><i class="fa fa-video-camera" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </a>
+    <div class="card-content">
+      <div class="title"><a href="{{ url }}" title="{{ name }}">{{ name }}</a></div>
+    </div>
+</div>

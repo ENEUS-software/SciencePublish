@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+<div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/sRR0ekaZ9yw?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&volume=0&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen volume="0"></iframe>
+    </div>
+</div>
+
+<div id="vidtop-content">
+  <div class="vid-info">
+  <img src="{{ logo }}" alt="{{ site_name }}" />
+	  <h1>Сайт на обслуговуванні</h1>
+    <h4>Сайт <b>"Моя Жовківщина"</b> зараз на технічному обслуговуванні. Скоро він запрацює знову. Дякуємо вам за терпіння.</h4>
+    <p>Жовква - Аерозйомка (03.04.2016)</p>
+    <p>Автор відео:<b> Jura Dumych</b></p>
+  </div>
+</div>
