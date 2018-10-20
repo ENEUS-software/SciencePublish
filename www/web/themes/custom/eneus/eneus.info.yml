@@ -1,0 +1,33 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'ENEUS.info'
+description: 'Uses the Bootstrap framework Sass source files and must be compiled (not for beginners).'
+package: 'Bootstrap'
+
+regions:
+  top_navigation: 'Top Navigation'
+  navigation: 'Navigation'
+  navigation_right: 'Navigation Right'
+  breadcrumb: Breadcrumb
+  help: 'Help'
+  highlighted: Highlighted
+  header: 'Top Bar'
+  featured_top: 'Featured top'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  page_bottom: 'Page bottom'
+  bottom: 'Bottom'
+  footer: 'Footer'
+  footer_menu_left: 'Footer Menu Left'
+  footer_menu_right: 'Footer Menu Right'
+  footer_copyright_left: 'Footer Copyright Left'
+  footer_copyright_right: 'Footer Copyright Right'
+  
+libraries:
+  - 'eneus/global-styling'
+  - 'eneus/owlcarousel2'
+  - 'eneus/PhotoSwipe'
+  - 'eneus/slick-carousel'

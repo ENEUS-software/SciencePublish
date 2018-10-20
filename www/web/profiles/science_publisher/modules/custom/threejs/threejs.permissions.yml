@@ -1,0 +1,4 @@
+administer threejs configuration:
+  title: 'Administer ThreeJS configuration'
+  description: 'Optional description.'
+  restrict access: true
